@@ -31,7 +31,5 @@ npm run dev
 - `src/components/weather-graph/WeatherGraph.tsx`: Component responsible for fetching weather data and displaying it in a graph.
 - `src/App.tsx`: Main application component that includes the `WeatherGraph` component.
 
-## Project Structure
-
-- `src/components/weather-graph/WeatherGraph.tsx`: Component responsible for fetching weather data and displaying it in a graph.
-- `src/App.tsx`: Main application component that includes the `WeatherGraph` component.
+## UI
+![image](https://github.com/user-attachments/assets/ec43ad5a-2211-4902-8f67-624c079b57d1)
