@@ -1,54 +1,37 @@
-# React + TypeScript + Vite
+## Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+:warning: This project were implemented with a STRAIGHTFORWARD approach.
 
-Currently, two official plugins are available:
+The task description is quite vague and lacks sufficient detail, leaving a lot open to interpretation. The code itself has scattered comments that only address a few aspects. I'd be happy to dive deeper, clarify these uncertainties, and explore all potential implementation options together.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Goal
 
-## Expanding the ESLint configuration
+This project is designed to display weather data in graph, showing the minimum and maximum temperatures for various cities and countries, along with the last update time.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Display Min and Max temperature in graphs
+- Show Country, City, Temperature, and Last update time
+- Auto-update data every minute
+
+## Running the Project
+1. First, ensure you have the backend server running from repository [Task2-BE-WEATHER](https://github.com/UladMitskevich/Task2-BE-WEATHER).
+2. Install dependencies
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+npm i
 ```
+3. Start the development server:
+```
+npm run dev
+```
+4. Open your browser and navigate to `http://localhost:{yourDevPort}` to see the application in action.
+
+## Project Structure
+
+- `src/components/weather-graph/WeatherGraph.tsx`: Component responsible for fetching weather data and displaying it in a graph.
+- `src/App.tsx`: Main application component that includes the `WeatherGraph` component.
+
+## Project Structure
+
+- `src/components/weather-graph/WeatherGraph.tsx`: Component responsible for fetching weather data and displaying it in a graph.
+- `src/App.tsx`: Main application component that includes the `WeatherGraph` component.
